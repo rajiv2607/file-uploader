@@ -1,4 +1,5 @@
 import React from 'react'
+import * as valid from '../constants/ValidFiles'
 
 export default function TableView(props) {
     //Default Values
@@ -17,7 +18,7 @@ export default function TableView(props) {
                 <tr className='table-row'>
                     {
                         props.arrOfFileDoc.map((rowData, index) => {
-                            if (index < numberOfLines && isValidFile) {
+                            if (index < numberOfLines && isValidFile && index <= valid.MAX_VIEW ) {
                                 return (
 
                                     <tr>{
